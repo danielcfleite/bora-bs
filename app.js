@@ -1,7 +1,12 @@
+const menuModal = document.getElementById("menu-modal");
 const navIcon2 = document.querySelector("#nav-icon2");
 
 navIcon2.addEventListener("click", () => {
-  navIcon2.classList.toggle("open");
+  if (navIcon2.classList.toggle("open")) {
+    menuModal.style.display = "block";
+  } else {
+    menuModal.style.display = "none";
+  }
 });
 
 // animações icon-box
@@ -9,12 +14,12 @@ navIcon2.addEventListener("click", () => {
 const mouseLua = document.getElementById("mouseLua");
 const moon = document.getElementById("nightEvents");
 mouseLua.addEventListener("mouseover", (trocarIcone) => {
-  nightEvents.classList.remove("bi-moon");
-  nightEvents.classList.add("bi-moon-stars-fill");
+  moon.classList.remove("bi-moon");
+  moon.classList.add("bi-moon-stars-fill");
 });
 mouseLua.addEventListener("mouseout", (voltarIcone) => {
-  nightEvents.classList.remove("bi-moon-stars-fill");
-  nightEvents.classList.add("bi-moon");
+  moon.classList.remove("bi-moon-stars-fill");
+  moon.classList.add("bi-moon");
 });
 onmouseout = (voltarIcone) => {};
 
